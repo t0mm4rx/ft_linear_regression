@@ -4,7 +4,32 @@
 
 The goal of the project is to train a program to guess the price of a car given its kilometrage. It's a simple linear regression problem.
 
-## What's linear regression ?
+## How to use ?
+
+Be sure to have a Python > 3.5 installed, with numpy, pandas and matplotlib.
+
+To visualize the dataset:
+
+```sh
+# If the model has already been trained, the line will be plotted
+python3 plot_data.py
+```
+
+To train the dataset:
+
+```sh
+python3 train.py
+```
+
+To predict a price:
+
+```sh
+python3 predict.py
+```
+
+## Project walkthrough
+
+### What's linear regression ?
 
 ![Linear regression](https://miro.medium.com/max/1280/1*eeIvlwkMNG1wSmj3FR6M2g.gif)
 
@@ -32,15 +57,13 @@ for every epochs:
 		bias = bias - delta_bias
 ```
 
-
-
-## Project walkthrough
-
 ### Get a visual representation of the given dataset
 
 You can use pyplot to visualize data in Python. Here we have a 2D dataset, so we use the scatter function. Here is what we get:![First look of our dataset](./screenshots/1.png)
 
-We can see that the axis have a really different scale. So what we can do is normalizing our data, to constrain every example between 0 and 1 on both axis. So now we have:![Our normalized dataset](./screenshots/2.png)
+We can see that the axis have a really different scale. In general, machine learning algortihms work best with unskewed data, so what we can do is normalizing our data, to constrain every example between 0 and 1 on both axis. So now we have:![Our normalized dataset](./screenshots/2.png)
+
+We can expect that our theta0 should be around 8000, and our theta1 should be a small negative value. It will help us know if what we'll get is good or not.
 
 ### Fit our line
 
