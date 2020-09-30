@@ -28,9 +28,7 @@ def cost(features: np.ndarray, targets: np.ndarray, theta0: float, theta1: float
 
 def main() -> None:
 	"""Run the training and save the weights."""
-	# We load the csv, and we get the numpy array of it
 	data = pd.read_csv("./data.csv")
-	# We shuffle the dataset in case of the data has any logical order
 	max_km, max_price = prepare_data(data)
 	data = data.values
 	features = data[:,0]
@@ -46,10 +44,8 @@ def main() -> None:
 		avg_error = cost(data[:, 0], data[:, 1], theta0, theta1)
 		errors.append(avg_error)
 		print("Epoch {:4}/{:4}, average error: {:.6f}".format(epoch, epochs, avg_error))
-	# Plot the training
 	plt.plot(np.array(errors))
 	plt.show()
-	# Save weights
 	theta0 *= max_price
 	theta1 *= (max_price / max_km)
 	print("Theta0: {:.4f}".format(theta0))

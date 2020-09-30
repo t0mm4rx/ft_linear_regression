@@ -1,12 +1,12 @@
 """
-	We visualize our dataset, and our normalized dataset.
+	This program shows visualizations for our dataset.
 """
 import pandas as pd
 import matplotlib.pyplot as plt
 from functions import prepare_data, get_weights
 
 def main() -> None:
-	"""Runs the program, plots raw and normalized dataset."""
+	"""Runs the program, plots raw and normalized dataset. If the weights are not null, we draw them as a red line."""
 	data = pd.read_csv("./data.csv")
 	_, ax = plt.subplots(1,2)
 	ax[0].scatter(data=data, x="km", y="price")

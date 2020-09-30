@@ -12,7 +12,6 @@ def main() -> None:
 	except:
 		print("Cannot cast '{}' to float.".format(kilometrage))
 		exit(1)
-
 	theta0, theta1 = get_weights()
 	prediction = predict(theta0, theta1, kilometrage)
 	print("Estimated price for {}kms: {:.4f}$".format(kilometrage, prediction))
