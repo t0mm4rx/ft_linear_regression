@@ -75,7 +75,7 @@ price = theta0 + theta1 * kilometrage
 
 Now we use the gradient descent algorithm to find the best parameters.
 
-Here what's the training looks like on my side, **with 1000 epochs and a batch size of 4**:![Training](./screenshots/3.png)
+Here what's the training looks like on my side, **with 1000 epochs, a learning rate of 0.01 and a batch size of 4**:![Training](./screenshots/3.png)
 
 At the end of the training, I have:
 
