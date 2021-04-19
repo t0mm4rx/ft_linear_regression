@@ -33,7 +33,7 @@ def main() -> None:
 	data = data.values
 	features = data[:,0]
 	targets = data[:,1]
-	learning_rate = 0.01
+	learning_rate = 0.1
 	epochs = 1000
 	batch_size = data.shape[0]
 	errors = []
