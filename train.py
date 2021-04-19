@@ -35,7 +35,7 @@ def main() -> None:
 	targets = data[:,1]
 	learning_rate = 0.01
 	epochs = 1000
-	batch_size = 4
+	batch_size = data.shape[0]
 	errors = []
 	theta0, theta1 = (0.0, 0.0)
 	for epoch in range(1, epochs + 1):
